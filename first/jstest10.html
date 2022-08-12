@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>콜백함수</p>
+  </body>
+
+  <script>
+    //eat라는 함수에 파라미터 하나를 전달받음
+    //그 파라미터에 함수를 전달 받게
+    function eat(act) {
+      console.log("밥 먹구");
+      act();
+      //전달받은 함수를 호출도 할 수 있음
+    }
+    //이런 함수를 'call back'함수 라고 한다.
+
+    //변수로 선언된 함수
+    let sleep = function () {
+      console.log("잠 자기");
+    };
+
+    let study = function () {
+      alert("공부하기");
+    };
+
+    //eat함수를 변수로 선언
+    let anotherName = eat;
+    anotherName(sleep);
+
+    // eat(sleep);
+    // eat(study);
+  </script>
+</html>

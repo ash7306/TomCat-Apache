@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>하이하이</p>
+  </body>
+
+  <!-- 클라이언트(브라우저)에서 실행 시켜준 것임 서버가 아니라 -->
+  <script>
+    //자바랑 다르게 컴파일언어가 아님
+
+    console.log(myVar);
+    //초기화 되지 않은 값도 undefined로 콘솔에 출력됨
+    var myVar = 10;
+
+    myVar = "changed";
+    //타입에 따라 동적으로 자기가 알아서 변수 설정을 해줌
+    //타입이 있긴한 명시하지 않을 뿐임
+    console.log(myVar);
+  </script>
+</html>

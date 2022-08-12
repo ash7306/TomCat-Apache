@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>하이하이</p>
+  </body>
+
+  <!-- 클라이언트(브라우저)에서 실행 시켜준 것임 서버가 아니라 -->
+
+  <!-- 관계연산자 -->
+  <script>
+    let i = 10;
+    while (i) {
+      console.log("반복");
+      i--;
+    }
+
+    for (let j = 0; j < 10; j++) {
+      console.log("for 반복");
+      if (j == 3) {
+        console.log("반복중단");
+        break;
+      }
+    }
+
+    let k = "10";
+    switch (k) {
+      case 1:
+        console.log("1임");
+        break;
+      case "1" + "0":
+        console.log("10임");
+
+      default:
+        console.log("기본");
+    }
+  </script>
+</html>

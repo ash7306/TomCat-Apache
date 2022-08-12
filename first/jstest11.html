@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <button onclick="myListener()">눌러봐</button> -->
+    <button id="mybtn">눌러봐</button>
+    <input id="mytext" value="test 값" />
+
+    <button id="mybtn2">호출</button>
+  </body>
+
+  <script>
+    function myListener(e) {
+      alert("눌러");
+      console.log(e);
+    }
+    // mybtn.onclick = myListener;
+
+    //브라우저랑 소통할 수 있는 객체를 만들어 줌 ==> DOM
+    let elem = document.getElementById("mybtn");
+    //element값을 반환함
+    elem.addEventListener("click", myListener);
+    //elem.addEventListener("click", myListener());
+    //괄호가 있고 없고?, 괄호가 있으면 함수의 반환값을 집어 넣을텐데
+    //위에 myListener는 반환 값이 없음 , myListener()은 undefined 값을 호출 함
+
+    let inputText = document.getElementById("mytext");
+    console.log(inputText.value);
+    console.log(mytext.value);
+
+    //텍스트를 작성하고 버튼을 클릭하면 콘솔에 출력되게
+    function myListener2(e) {
+      console.log(inputText.value);
+    }
+
+    document.getElementById("mybtn2").addEventListener("click", myListener2);
+    // let elem2 = document.getElementById("mybtn2");
+    // elem2.addEventListener("click", myListener2);
+
+    // mybtn2.addEventListener("mousedown", function (e) {
+    //   console.log(inputText.value);
+    // });
+  </script>
+</html>

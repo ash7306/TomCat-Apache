@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>하이하이</p>
+  </body>
+
+  <!-- 클라이언트(브라우저)에서 실행 시켜준 것임 서버가 아니라 -->
+
+  <!-- 관계연산자 -->
+  <script>
+    console.log(1 > 2);
+    console.log(3 < 4);
+    console.log(10 == 10);
+    console.log("abc" == "abc");
+
+    //다른타입도 관계연산 가능
+
+    //유연한 비교 '=='
+    console.log(1 == "1");
+    //문자열로 되어있는 숫자는 숫자로 표현함
+    console.log(1 == true);
+    console.log(0 == false);
+
+    //엄격한 비교는 '==='
+    console.log(1 === "1");
+    console.log(1 === true);
+
+    console.log(null == undefined);
+    console.log(null === undefined);
+
+    //NoN은 무엇을 비교해도 false이다.
+    console.log(NaN == NaN);
+    console.log(NaN === NaN);
+    console.log(isNaN(NaN));
+
+    //두개의 객체를 비교하고 싶을 때(따지자면 엄격한 비교에 속함)
+    console.log(Object.is(NaN, NaN));
+    console.log(Object.is(1, "1"));
+  </script>
+</html>

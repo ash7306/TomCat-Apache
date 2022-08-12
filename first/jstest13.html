@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>timeout</title>
+    <style>
+      .mydiv1 {
+        flex: 1;
+      }
+      .mydiv2 {
+        flex: 1;
+      }
+      .mydiv3 {
+        flex: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="mydiv1"></div>
+    <div id="mydiv2"></div>
+    <div id="mydiv3"></div>
+    <button id="start">시작</button>
+    <button id="stop">멈춰</button>
+  </body>
+
+  <script>
+    setTimeout(function () {
+      console.log("3초 후에 출력");
+    }, 3000);
+    //밀리세컨드 단위로 시간을 넣어 줄 수가 있다.
+
+    let start = document.getElementById("start");
+    let stopbtn = document.getElementById("stop");
+
+    var number = 0;
+    var intervalId = setInterval(function () {
+      number++;
+      console.log(number);
+    }, 100);
+
+    var id;
+    start.addEventListener("click", function (e) {
+      var number = 0;
+      var number2 = 0;
+      var number3 = 0;
+      id = setInterval(function () {
+        if (number < 60) {
+          number++;
+
+          mydiv3.innerHTML = number;
+        } else if (number2 > 59) {
+          number3++;
+          number2 = 0;
+          number = 0;
+
+          mydiv1.innerHTML = number3;
+        } else if (number3 == 60) {
+          number3 = 0;
+          number2 = 0;
+          number = 0;
+        } else {
+          number2++;
+          number = 0;
+
+          mydiv2.innerHTML = number2;
+        }
+      }, 1);
+    });
+
+    stopbtn.addEventListener("click", function (e) {
+      clearInterval(id);
+    });
+  </script>
+</html>

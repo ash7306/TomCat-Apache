@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .red {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="move">이동하기</button>
+    <div id="mydiv"></div>
+    <button id="changebtn">텍스트값 변경하기</button>
+    <button id="color">색상 변경하기</button>
+  </body>
+
+  <script>
+    document.getElementById("move").addEventListener("click", function (e) {
+      //confirm 확인을 누르면 true 취소를 누르면 false
+      if (confirm("네이버로 이동하시겠습니까?")) {
+        window.location.href = "http://www.naver.com";
+        //지금 현재의 페이지가 작성한 페이지로 이동함
+      }
+    });
+
+    let mydiv = document.getElementById("mydiv");
+    let changeBtn = document.getElementById("chagebtn");
+    let colorbtn = document.getElementById("color");
+
+    changebtn.addEventListener("click", function (e) {
+      mydiv.innerHTML = "<strong> 텍스트 값을 </strong> 변경하였습니다.";
+      //innerText는 태그 표현을 해도 그냥 글자로 처리됨
+      //그래서 innerHTML은 태그 표현을 사용 가능
+    });
+
+    colorbtn.addEventListener("click", function (e) {
+      mydiv.classList.toggle("red");
+    });
+  </script>
+</html>

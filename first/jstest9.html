@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>펑션</p>
+  </body>
+
+  <!-- 클라이언트(브라우저)에서 실행 시켜준 것임 서버가 아니라 -->
+
+  <script>
+    //()파라미터 오른쪽에 => 적으면 이게 함수표현이 됨
+    //arrowfunction
+    let arrowfunc = (x) => {
+      console.log(x);
+    };
+
+    arrowfunc("abc");
+
+    let say = () => {
+      console.log("say");
+    };
+    say();
+
+    var num = 30;
+
+    function test() {
+      var num = 10;
+      print();
+    }
+
+    function print() {
+      console.log(num);
+    }
+
+    test();
+    print();
+  </script>
+</html>

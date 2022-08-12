@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>펑션</p>
+  </body>
+
+  <!-- 클라이언트(브라우저)에서 실행 시켜준 것임 서버가 아니라 -->
+
+  <script>
+    function params() {
+      let sum = 0;
+      for (let i = 0; i < arguments.length; i++) {
+        sum += arguments[i];
+      }
+      console.log(sum);
+    }
+
+    // arguments는 배열의 형태에 가까움
+    params(1, 2, 3, 4, 5, 7, 10);
+
+    function testDefault(a = 10) {
+      console.log(a);
+    }
+
+    //값을 안 넣으면 a를 반환
+    testDefault(100);
+    testDefault();
+
+    //함수 호출
+    hello("성훈");
+
+    //함수 정의
+    //펑션 이름(파라미터)
+    function hello(name) {
+      console.log(name + "님 안녕하세요.");
+    }
+    //스크립트 영역에서 실행흐름과는 무관하게 먼저 호출을 하고 정의도 가능함
+
+    hello(NaN);
+    hello(null); //다됨
+
+    hello(); //undefined
+
+    hello("", 2, 3); //제일 앞 한개만
+
+    //변수 공간에 함수를 집어넣음
+    let myfunc = function (a, b) {
+      console.log(a + b);
+    };
+    //변수공간에 집어넣은 함수는 일반 함수와 다르게 먼저 호출하고 정의 하는건 안됨
+
+    myfunc(1, 2);
+    myfunc("우", "영우");
+  </script>
+</html>

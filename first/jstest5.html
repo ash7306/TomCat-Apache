@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>하이하이</p>
+  </body>
+
+  <!-- 클라이언트(브라우저)에서 실행 시켜준 것임 서버가 아니라 -->
+
+  <!-- 관계연산자 -->
+  <script>
+    {
+      var myVar = 10;
+      //지역 변수는 let으로 만든다
+      let localVar = 20;
+      console.log(localVar);
+
+      //상수는 const
+      const final = 30;
+      console.log(final);
+    }
+    console.log(myVar);
+
+    //boolean 값대신 다른 값들도 가능함
+    //값이 있는 문자열은 true 아니면 false
+    //값이 있는 숫자는 true 0은 false
+    //{} , [] 도 참임 ==> 객체가 null참조가 아니면 true
+    //NoN, undefined 는 다 false
+    if ("") {
+      console.log("참임");
+    } else {
+      console.log("거짓임");
+    }
+
+    //삼항 연산자도 가능
+    let result = false ? "왼쪽" : "오른쪽";
+    console.log(result);
+
+    //왼쪽이 null 값이면 우측에 있는 값으로 대체 시켜줌
+    let nullish = null ?? "hello";
+    console.log(nullish);
+
+    console.log(true && true);
+    console.log(false || true);
+
+    //&&(and)연산은 첫번째로 false 나타낼 수 있는 값을 찾아냄
+    console.log("asdf" && "" && "abbb");
+    console.log(0 && 500);
+    console.log(100 && 500);
+    //false 값을 찾을 수 없으면 마지막 값
+
+    //||(or)연산은 첫번째로 true 로 나타낼 수 있는 값을 찾아냄
+    console.log("asdf" || null);
+    console.log(0 || null || false);
+    //true 값을 찾을 수 없으면 마지막 값
+
+    console.log(!true);
+    console.log(!0);
+  </script>
+</html>

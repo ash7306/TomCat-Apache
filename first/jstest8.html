@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>펑션</p>
+  </body>
+
+  <!-- 클라이언트(브라우저)에서 실행 시켜준 것임 서버가 아니라 -->
+
+  <!-- 관계연산자 -->
+  <script>
+    function sum(a, b) {
+      return a + b;
+    }
+
+    let result = sum(10, 20);
+    console.log(result);
+    console.log(sum("우", "영우"));
+
+    function sum2(a, b) {
+      if (a > b) {
+        return a + b;
+      } else {
+        return "b가 a보다 큽니다.";
+      }
+    }
+
+    console.log(sum2(20, 30));
+    console.log(sum2("우", "영우"));
+
+    function somefunc() {}
+
+    console.log(somefunc());
+  </script>
+</html>
