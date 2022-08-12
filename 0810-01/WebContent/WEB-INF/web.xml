@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" version="4.0">
+  <display-name>0810-01</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <servlet>
+  	<servlet-name>FirstServlet</servlet-name>
+  	<servlet-class>kr.co.green.Countryservlet</servlet-class>
+  	<!-- 패키지 이름과 클래스 이름 -->
+  </servlet>
+  
+  <servlet-mapping>
+  	<!-- 위에적은 서브렛 네임 그대로 적어줌  -->
+  	<servlet-name>FirstServlet</servlet-name>
+  	<url-pattern>/test</url-pattern>
+  	<!-- /#### 적어주면 됨 -->
+  	<!--
+  		재실행하고 끝에 위에 적었던 url패턴을 적어주면 (http://localhost:8080/0810-01/test)
+  		Countryservlet에서 재정의해준 service를 실행 함
+  	-->
+  </servlet-mapping>
+</web-app>
